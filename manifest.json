@@ -1,0 +1,27 @@
+{
+	"name" : "Gmail Chrome Extension",
+	"version" : "0.1",
+	"description" : "Linkify URL's in your GMAIL's subjects line!",
+	"icons" : {
+		  "16" : "feedme16.png",
+		  "48" : "feedme48.png",
+		  "128" : "feedme128.png"
+		  },
+	"page_action": {
+			  "default_icon" : "feedme16.png",
+			  "default_title" : "Eat a link!"
+			},
+	"permissions" : [
+		      "tabs",
+		      "http://eyeredux.com/",
+		      "http://www.eyeredux.com/"
+		      ],
+	"content_scripts" : [
+			  {
+				"matches" : ["http://eyeredux.com/*", "http://www.eyeredux.com/*"],
+				"js" : ["content_script.js"]		
+				}
+			]
+
+
+}		  
